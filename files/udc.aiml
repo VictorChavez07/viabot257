@@ -6,7 +6,28 @@
   </category>
   <category>
       <pattern>HELLO BOT</pattern>
-      <template>hello world </template>
+      <template>
+        <random>      
+          <li>hello </li>
+           <li>hi there </li>
+            <li>Good to see you </li>
+             <li>What is your name? </li>
+          </random>
+     </template>
+  </category>
+  
+    <category>
+      <pattern>ROLL A DICE </pattern>
+      <template>
+        <random>      
+         <li>1</li>
+         <li>2</li>
+         <li>3 </li>
+         <li>4</li>
+         <li>5 </li>
+         <li>6</li>
+          </random>
+     </template>
   </category>
   
   <category>
@@ -18,4 +39,49 @@
       <pattern>_ ROBOT</pattern>
       <template>hello User </template>
   </category>
+  
+    <category>
+      <pattern>MY NAME IS * *</pattern>
+      <template>hello <star index= "1" />. How are you Mr <star index= "2" />  </template>
+  </category>
+  
+    <category>
+      <pattern>SAY *</pattern>
+      <template><star index= "1" /></template>
+  </category>
+  
+    <category>
+      <pattern>I SEE A MOVIE CALLED  * </pattern>
+      <template>
+          that sounds interesting
+          <think><set name ="movie"><star/></set> </think>
+      </template>
+  </category>
+  
+      <category>
+      <pattern>WHAT MOVIE DO YOU REMENBER?  </pattern>
+      <template>
+          Well recently I don't see movies , I only remenber your movie  called <get name ="movie"/> .
+      </template>
+  </category>
+  
+    <category>
+      <pattern>My name is * * </pattern>
+      <template>hello <set name ="firstname"><star/> </set><set name ="surtname"><star index ="2"/></set></template>
+  </category>
+  
+    <category>
+      <pattern>WHAT IS MY FIRST NAME  </pattern>
+      <template>Your name is  <get name ="firstname"/> </template>
+  </category>
+    <category>
+      <pattern>WHAT IS MY SURNAME  </pattern>
+      <template>Your surname is  <get name ="surtname"/> </template>
+  </category>  
+      <category>
+      <pattern>WHAT IS MY FULL NAME  </pattern>
+      <template>Your full name is  <get name ="firstname"/> <get name ="surtname"/> </template>
+  </category>
+  
+
 </aiml>
